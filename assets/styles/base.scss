@@ -1,0 +1,58 @@
+@import './mixin';
+@import './iconfont';
+
+* {
+  word-break: break-all;
+}
+
+input[disabled] {
+  background: #fff;
+  opacity: 1;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+
+  body,
+  .mint-tabbar,
+  .mint-header {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+.mint-tabbar > .mint-tab-item.is-selected{
+  color: #348F50;
+}
+.mint-header {
+  background: -webkit-gradient(linear, left top, right top, from(#348F50), to(#56B4D3));
+  height: px2rem(88px);
+  font-size: px2rem(36px);
+
+  .mintui {
+    font-size: px2rem(36px);
+  }
+}
+
+body,
+html {
+  @include wh(100%, 100%);
+  background-color: $fill-base;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
